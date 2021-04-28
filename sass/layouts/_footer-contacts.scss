@@ -1,0 +1,27 @@
+.footer-contacts {
+  padding-top: 60px;
+  flex-basis: calc((50% - 45px) / 2);
+}
+
+.footer-contacts__logo--white {
+  color: var(--primary-white-color);
+}
+
+.footer-contacts__address--white {
+  color: var(--primary-white-color);
+}
+
+.footer-contacts__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.footer-contacts__link {
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color var(--animation);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}

@@ -1,0 +1,32 @@
+.contact-nav {
+  display: flex;
+  margin-left: auto;
+}
+
+.contact-nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contact-nav__link {
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: var(--primary-text-color);
+  transition: color var(--animation);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.contact-nav__icon {
+  margin-right: 10px;
+  fill: currentColor;
+
+  .contact-nav__link:hover &,
+  .contact-nav__link:focus & {
+    color: var(--accent-color);
+  }
+}

@@ -79,11 +79,29 @@ img {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .button {
@@ -464,17 +482,33 @@ img {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .section__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
   color: var(--title-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .section__title {
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+  }
 }
 
 .header {
@@ -509,18 +543,29 @@ img {
 }
 
 .hero__title {
+  text-align: center;
+  letter-spacing: 0.06em;
+  font-size: 26px;
+  line-height: 1, 62;
   width: 697px;
   margin: 0 auto 31px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--primary-white-color);
 }
 
-.features {
-  padding-bottom: 0;
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features {
+    padding-bottom: 0;
+  }
 }
 
 .features__title {
@@ -533,8 +578,30 @@ img {
   color: var(--title-color);
 }
 
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .features__title {
+    text-align: center;
+  }
+}
+
+.features__description {
+  margin-bottom: 0;
+}
+
 .features__item {
-  --grid-item: 4;
+  --grid-item: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .features__item {
+    --grid-item: 2;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features__item {
+    --grid-item: 4;
+  }
 }
 
 .features__item::before {
@@ -564,11 +631,14 @@ img {
   background-image: url(../images/icon/features/astronaut.svg);
 }
 
-.about__item {
-  --grid-item: 3;
+@media screen and (max-width: 1199px) {
+  .about {
+    display: none;
+  }
 }
 
 .about__item {
+  --grid-item: 3;
   position: relative;
 }
 
@@ -594,10 +664,22 @@ img {
 }
 
 .team__item {
-  --grid-item: 4;
+  --grid-item: 1;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: var(--primary-white-color);
+}
+
+@media screen and (min-width: 768px) {
+  .team__item {
+    --grid-item: 2;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team__item {
+    --grid-item: 4;
+  }
 }
 
 .team__content {
@@ -621,12 +703,20 @@ img {
   text-align: center;
 }
 
-.clients__list {
-  display: flex;
+.clients__item {
+  --grid-item: 2;
 }
 
-.clients__item {
-  --grid-item: 6;
+@media screen and (min-width: 768px) {
+  .clients__item {
+    --grid-item: 3;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients__item {
+    --grid-item: 6;
+  }
 }
 
 .clients__link {

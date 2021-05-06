@@ -1,5 +1,7 @@
 .features {
-  padding-bottom: 0;
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 0;
+  }
 }
 
 .features__title {
@@ -10,10 +12,26 @@
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--title-color);
+
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    text-align: center;
+  }
+}
+
+.features__description {
+  margin-bottom: 0;
 }
 
 .features__item {
-  --grid-item: 4;
+  --grid-item: 1;
+
+  @media screen and (min-width: 768px) {
+    --grid-item: 2;
+  }
+
+  @media screen and (min-width: 1200px) {
+    --grid-item: 4;
+  }
 
   &::before {
     content: " ";

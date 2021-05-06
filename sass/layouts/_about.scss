@@ -1,8 +1,11 @@
-.about__item {
-  --grid-item: 3;
+.about {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
 
 .about__item {
+  --grid-item: 3;
   position: relative;
 }
 
